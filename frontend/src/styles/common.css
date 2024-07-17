@@ -1,0 +1,90 @@
+.common-header {
+    /* background-color: #1f212b; */
+    background-color: #234964;
+    /* color: #e1e1e1; */
+    color: #629dc9;
+    align-items: center;
+    font-family: "Futura";
+    font-size: 32pt;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    justify-content: space-between; /* 헤더 아이템 간 공간을 분배 */
+}
+
+.common-header-items {
+    display: flex;
+    align-items: center;
+}
+
+.common-header .auth-buttons {
+    display: flex;
+    gap: 10px; /* 버튼 사이의 간격 */
+}
+
+.common-header .auth-buttons button {
+    padding: 10px 20px;
+    font-size: 16pt;
+    border: none;
+    border-radius: 5px;
+    background-color: #156bc8;
+    color: white;
+    cursor: pointer;
+    font-family: "Futura"; /* 동일한 폰트 사용 */
+    pointer-events: auto;
+}
+
+.common-header .auth-buttons button:hover {
+    background-color: #156bea; /* 호버 시 배경색 변경 */
+}
+
+/* Body */
+.common-body {
+    background-color: #234964;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Futura";
+    font-size: 24pt;
+    color :#629dc9;
+    padding : 10px;
+}
+
+.common-body-summaryinfo {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.common-body-chartinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0);
+}
+
+/* font */
+@font-face {
+    font-family: "Futura";
+    font-weight: 50;
+    /* src: url("../../public/FuturaCyrillicMedium.ttf") format("truetype"); */
+}
+
+@font-face {
+    font-family: "Agency";
+    font-weight: 50;
+    /* src: url("../../public/AGENCYR.TTF") format("truetype"); */ 
+}
+
+/* 
+@font-face {
+    font-family: "Hakgyo";
+    font-weight: 50;
+    src: url("../../public/HakgyoansimBareonbatangR.ttf") format("truetype");
+}
+*/
