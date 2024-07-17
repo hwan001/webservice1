@@ -1,6 +1,6 @@
-import "../styles/common.css";
-import Header from "../components/header.js";
-import Navbar from "../components/navbar.js";
+import "../styles/Common.css";
+import Header from "../components/Header.js";
+import Navbar from "../components/Navbar.js";
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -109,7 +109,6 @@ function Login() {
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Products", path: "/products" },
-    { label: "Contact", path: "/contact" },
   ];
 
   return (

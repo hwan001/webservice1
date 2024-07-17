@@ -23,6 +23,7 @@
     color: #fff;
     justify-self: start;
     margin-left: 10px;
+    margin-right: 10px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -34,7 +35,8 @@
     margin-left: 0.5rem;
     font-size: 1.8rem;
   }
-  
+
+  /*
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -45,6 +47,18 @@
     justify-content: end;
     margin-right: 2rem;
   }
+  */
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+
   
   .nav-item {
     height: 80px;

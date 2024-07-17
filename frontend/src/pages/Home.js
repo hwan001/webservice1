@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/common.css";
+import "../styles/Common.css";
 
-import Header from "../components/header.js";
-//import Card from '../components/card.js';
-import Navbar from "../components/navbar.js";
+import Header from "../components/Header.js";
+//import Card from '../components/Card.js';
+import Navbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
 import HeroSection from "../components/HeroSection.js";
 
 function HomeHeader() {
@@ -34,7 +35,6 @@ function HomeBody() {
 
   return (
     <>
-      <HeroSection />
       <div className="common-body"></div>
     </>
   );
@@ -50,7 +50,8 @@ function Home() {
   return (
     <>
       <Navbar menuItems={homeMenuItems} />
-      <HomeBody />
+      <HeroSection />
+      <Footer />
     </>
   );
 }

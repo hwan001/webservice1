@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "../styles/common.css"
+import "../styles/Common.css"
  
 function Header({ title, onClick, style, children }) {
     const navigate = useNavigate();

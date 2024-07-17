@@ -5,10 +5,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Products from './pages/Products';
 import Login from './pages/Login';
-// import SignUp from './pages/SignUp';
 import SignUp from './pages/SignUp';
-
-import './App.css';
 
 function App() { 
   return (
@@ -16,9 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path='/services' component = {<Services />} />
-        <Route path='/products' component = {<Products />} />
-        <Route path='/signup' component = {<SignUp />} />
+        <Route path='/signup' element = {<SignUp />} />
+        <Route path='/services' element = {<Services />} />
+        <Route path='/products' element = {<Products />} />
       </Routes>
     </Router>
   );
