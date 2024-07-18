@@ -57,7 +57,7 @@
 }
 
 .services {
-  background-image: #ff1 /* url('/src/images/img-8.jpg'); */ ;
+  background-image: url('/src/images/img-1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -66,9 +66,9 @@
 }
 
 .products {
-  margin-top: 100px; /* navbar height (80px) + some spacing */
-  text-align: center;
-  background-image: #fff /* url('/src/images/img-8.jpg'); */ ;
+  /* margin-top: 100px; /* navbar height (80px) + some spacing */
+  /* text-align: center; */ 
+  background-image: url('/src/images/img-2.jpg');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;

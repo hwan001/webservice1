@@ -1,6 +1,7 @@
 import "../styles/Common.css";
-import Header from "../components/Header.js";
+// import Header from "../components/Header.js";
 import Navbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -113,11 +114,9 @@ function Login() {
 
   return (
     <>
-      <Header title="H001 SYSTEM" />
       <Navbar menuItems={homeMenuItems} />
-      <div className="common-body">
-        <LoginPage />
-      </div>
+      <LoginPage />
+      <Footer />
     </>
   );
 }

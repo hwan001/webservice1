@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
-import Header from "../components/Header.js";
+// import Header from "../components/Header.js";
 import Navbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
 
 import { BASE_URL } from '../constants';
 import "../styles/Common.css";
@@ -106,11 +107,18 @@ function SignupPage() {
 }
 
 function SignUp() {
+  const homeMenuItems = [
+    { label: "Home", path: "/" },
+    { label: "Services", path: "/services" },
+    { label: "Products", path: "/products" },
+  ];
+
   return (
     <>
       <div>
-        <Header title="H001 SYSTEM" style={{}} />
+        <Navbar menuItems={homeMenuItems} />
         <SignupPage />
+        <Footer />
       </div>
     </>
   );
