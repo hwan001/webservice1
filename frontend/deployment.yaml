@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webservice1-front
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webservice1-front
+  template:
+    metadata:
+      labels:
+        app: webservice1-front
+    spec:
+      containers:
+      - name: webservice1
+        image: harbor.k8s.666lab.org/webservice1/webservice1-front:latest
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: harbor-creds
+      
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webservice1-front-service
+spec:
+  selector:
+    app: webservice1-front
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webservice1-front-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - webservice1.k8s.666lab.org
+  rules:
+  - host: webservice1.k8s.666lab.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webservice1-front-service
+            port:
+              number: 80

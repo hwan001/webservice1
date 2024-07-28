@@ -22,7 +22,7 @@ COPY --from=0 /app/build /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Nginx의 기본 포트를 엽니다.
-EXPOSE 80
+EXPOSE 3000
 
 # Nginx 실행
 CMD ["nginx", "-g", "daemon off;"]
