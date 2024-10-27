@@ -1,0 +1,11 @@
+# Caddyfile
+server.tail261a24.ts.net {
+    reverse_proxy frontend:3000 {
+        transport http {
+            # TLS 비활성화
+        }
+    }
+    tls {
+        issuer acme  # Let's Encrypt로 인증서 발급
+    }
+}
