@@ -14,13 +14,6 @@ services:
     networks:
       - virtual_network_webservice1
 
-  tailscale:
-    image: tailscale/tailscale
-    volumes:
-      - /var/run/tailscale:/var/run/tailscale
-    command: ["tailscaled", "--state", "/var/run/tailscale/tailscaled.state"]
-    network_mode: "host"
-
   frontend:
     build:
       context: ./frontend
